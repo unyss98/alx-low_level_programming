@@ -21,7 +21,7 @@ int main(void)
 			i = 0x10;
 			while (i <= 0xf)
 			{
-				putchar('i');
+				putchar(i);
 				i++;
 			}
 		}
