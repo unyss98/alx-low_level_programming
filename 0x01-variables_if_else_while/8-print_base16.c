@@ -20,7 +20,7 @@ int main(void)
 		{
 			for (i = 0xa; i <= 0xf; i++)
 			{
-				putchar(i);
+				putchar('i');
 			}
 		}
 
