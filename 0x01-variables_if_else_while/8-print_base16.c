@@ -16,6 +16,7 @@ int main(void)
 		putchar('0' + c);
 	}
 		else
+			while (c >= 0x10)
 		{
 			putchar(c);
 			c++;
