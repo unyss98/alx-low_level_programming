@@ -15,7 +15,7 @@ int main(void)
 		putchar('0' + c);
 		if (c >= 0x10)
 		{
-			putchar(c);
+			putchar('0');
 		}
 	}
 
