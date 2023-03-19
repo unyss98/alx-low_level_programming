@@ -14,7 +14,7 @@ int main(void)
 	{
 		putchar(alpha);
 	}
-	for (alpha = 'e'; 'q' != alpha <= 'z'; alpha++)
+	for (alpha = 'e'; ('q' != alpha <= 'z'); alpha++)
 	{
 		putchar(alpha);
 	}
