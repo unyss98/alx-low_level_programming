@@ -21,7 +21,7 @@ int main(void)
 			for (i = 0xa; i <= 0xf; i++)
 				if (i == c)
 				{
-					putchar(i);
+					putchar('0' + i);
 				}
 		}
 
