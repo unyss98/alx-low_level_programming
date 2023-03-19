@@ -17,11 +17,13 @@ int main(void)
 		putchar('0' + c);
 	}
 		else
+		{
 			i = 0x10;
 			while (i <= 0xf)
-		{
-			putchar('i');
-			i++;
+			{
+				putchar('i');
+				i++;
+			}
 		}
 
 	putchar('\n');
