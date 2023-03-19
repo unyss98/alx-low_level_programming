@@ -10,6 +10,7 @@ int main(void)
 {
 	char c;
 
+	c = 0x0;
 	for (c = 0x0; c <= 0xf; c++)
 	{
 		putchar(c);
