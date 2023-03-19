@@ -7,7 +7,7 @@
  * main - Entry point
  *
  * Return: Always 0 (Success)
- * /
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
@@ -31,7 +31,7 @@ int main(void)
 	}
 
 
-	if (last_digit < 6)!0;
+	if (last_digit < 6 && last_digit != 0)
 	{
 		scanf("%d %d", &n, &last_digit);
 		printf("Last digit of %d is %d and is less than 6 and not 0\n",
