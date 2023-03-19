@@ -18,11 +18,9 @@ int main(void)
 	}
 		else
 		{
-			i = 0x10;
-			while (i <= 0xf)
+			for (i = 0xa; i <= 0xf); i++)
 			{
 				putchar(i);
-				i++;
 			}
 		}
 
