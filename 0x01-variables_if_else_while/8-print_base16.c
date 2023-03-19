@@ -9,15 +9,14 @@
 int main(void)
 {
 	char c;
-	char d;
 
 	for (c = 0x0; c <= 0x9; c++)
 	{
 		putchar('0' + c);
 	}
-		for (d = 0x10; d <= 0xf; d++)
+		for (c = 0x10; c <= 0xf; c++)
 		{
-			putchar(d);
+			putchar(c);
 		}
 
 	putchar('\n');
