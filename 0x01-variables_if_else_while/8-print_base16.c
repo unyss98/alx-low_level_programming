@@ -10,14 +10,14 @@ int main(void)
 {
 	char c;
 
-	for (c = 0x0; c <= 0x9; c++)
+	for (c = 0x0; c <= 0xf; c++)
 	{
 		putchar('0' + c);
-	}
-		for (c = 0x10; c <= 0xf; c++)
+		if (c >= 0x10)
 		{
-			putchar('0' + c);
+			putchar(c);
 		}
+	}
 
 	putchar('\n');
 	return (0);
