@@ -16,9 +16,8 @@ int main(void)
 		putchar('0' + c);
 	}
 		else
-			for (c = 0x10; c >= 0xf; c++)
 		{
-			putchar(c);
+			putchar('c');
 		}
 
 	putchar('\n');
