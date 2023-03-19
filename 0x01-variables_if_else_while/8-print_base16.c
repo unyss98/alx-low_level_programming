@@ -16,7 +16,7 @@ int main(void)
 	}
 		for (c = 0x10; c <= 0xf; c++)
 		{
-			putchar(c);
+			putchar('0' + c);
 		}
 
 	putchar('\n');
