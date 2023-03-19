@@ -19,9 +19,10 @@ int main(void)
 		else
 		{
 			for (i = 0xa; i <= 0xf; i++)
-			{
-				putchar('0'+'i');
-			}
+				if (i == c)
+				{
+					putchar('0' + i);
+				}
 		}
 
 	putchar('\n');
