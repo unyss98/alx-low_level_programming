@@ -18,7 +18,7 @@ int main(void)
 	}
 		else
 		{
-			for (i = 0xa; i <= 0xf); i++)
+			for (i = 0xa; i <= 0xf; i++)
 			{
 				putchar(i);
 			}
