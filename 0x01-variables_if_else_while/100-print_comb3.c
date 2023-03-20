@@ -22,7 +22,7 @@ int main(void)
 			if (seconddigit != firstdigit && seconddigit > firstdigit)
 			{
 				putchar('0' + seconddigit);
-			        putchar(',');
+				putchar(',');
 				putchar(' ');
 			}
 		}
