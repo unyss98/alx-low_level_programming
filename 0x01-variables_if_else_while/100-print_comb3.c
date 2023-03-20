@@ -8,22 +8,22 @@
 
 int main(void)
 {
-	int first_digit;
-	int second_digit;
+	int firstdigit;
+	int seconddigit;
 
-	for (first_digit = 0; first_digit <= 9; first_digit++)
+	firstdigit = 0;
+	seconddigit = 0;
+
+	for (firstdigit = 0; firstdigit <= 9; firstdigit++)
 	{
-		if (first_digit != second_digit && first_digit < second_digit)
+		putchar('0' + firstdigit);
+		for (seconddigit = 0; seconddigit <= 9; seconddigit++)
 		{
-			putchar('0' + first_digit);
-			for (second_digit = 0; second_digit <= 9; second_digit++)
+			if (seconddigit != firstdigit && seconddigit > firstdigit)
 			{
-				if (first_digit != second_digit && first_digit < second_digit)
-				{
-					putchar('0' + second_digit);
-					putchar(',');
-					putchar (' ');
-				}
+				putchar('0' + seconddigit);
+				putchar(',');
+				putchar(' ');
 			}
 		}
 		putchar('\n');
