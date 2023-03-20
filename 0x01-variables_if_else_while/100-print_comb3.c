@@ -16,12 +16,12 @@ int main(void)
 
 	for (firstdigit = 0; firstdigit <= 9; firstdigit++)
 	{
-		putchar(firstdigit);
+		putchar('0' + firstdigit);
 		for (seconddigit = 0; seconddigit <= 9; seconddigit++)
 		{
 			if (seconddigit != firstdigit && seconddigit > firstdigit)
 			{
-				putchar( seconddigit);
+				putchar('0' + seconddigit);
 			        putchar(',');
 				putchar(' ');
 			}
