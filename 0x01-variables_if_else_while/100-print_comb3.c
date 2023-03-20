@@ -16,7 +16,10 @@ int main(void)
 
 	for (firstdigit = 0; firstdigit <= 9; firstdigit++)
 	{
-		putchar('0' + firstdigit);
+		while (firsdigit >= 0)
+		{
+			putchar('0' + firstdigit);
+		}
 		for (seconddigit = 0; seconddigit <= 9; seconddigit++)
 		{
 			if (seconddigit != firstdigit && seconddigit > firstdigit)
