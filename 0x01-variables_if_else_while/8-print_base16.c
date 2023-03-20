@@ -22,7 +22,6 @@ int main(void)
 				if (i == 'c')
 				{
 					putchar(i + '0');
-					16 % i;
 				}
 		}
 
