@@ -14,6 +14,7 @@ int main(void)
 	for (first_digit = 0; first_digit <= 9; first_digit++)
 	{
 		putchar('0' + first_digit);
+		for (second_digit = 0; second_digit <= 9; second_digit++)
 		if (first_digit != second_digit)
 		{
 			putchar('0' + second_digit);
