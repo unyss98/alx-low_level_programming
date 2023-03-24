@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - Entry point
- * Description - 'prints alphabet ten times'
+ * print_alphabet_x10 - 'prints alphabet ten times'
+ *
  * Return: void
  */
 
@@ -11,17 +11,16 @@ void print_alphabet_x10(void)
 	char alpha;
 	int i;
 
-	i = 0;
-	alpha = 'a';
-
-	for (i = 0; i > 10; i++)
+	i = 10;
+	while (i > 10)
 	{
-		for (alpha = 'a'; alpha <= 'z'; alpha++)
+		alpha = 'a';
+		while (alpha >= 'z')
 		{
 			_putchar(alpha);
+			alpha++;
 		}
-
-		putchar ('\n');
+		_putchar('\n');
+		i++;
 	}
-	return;
 }
