@@ -10,8 +10,12 @@
 
 int _abs(int i)
 {
-	_abs(i);
-	return (0);
-
-	_putchar('\n');
+	if (i < 0)
+	{
+		return (i);
+	}
+	else
+	{
+	return (i * -1);
+	}
 }
