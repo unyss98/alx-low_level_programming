@@ -8,7 +8,7 @@
 
 void print_alphabet_x10(void)
 {
-	char alpha;
+	int alpha;
 	int i;
 
 	i = 0;
@@ -24,4 +24,5 @@ void print_alphabet_x10(void)
 		_putchar('\n');
 		i++;
 	}
+	return;
 }
