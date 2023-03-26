@@ -27,12 +27,13 @@ int main(void)
 			{
 				putchar('0' + a / 10);
 				putchar('0' + a % 10);
+				putchar(' ');
 			}
 			else
 			{
 				putchar('0' + a);
+				putchar(' ');
 			}
-			putchar(' ');
 		}
 	}
 	return (0);
