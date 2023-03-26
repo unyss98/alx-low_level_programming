@@ -1,1 +1,1 @@
-my beginner programming lessons
+beginner lessons on C programming language
