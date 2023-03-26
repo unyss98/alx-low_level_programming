@@ -23,7 +23,10 @@ void print_diagonal(int n)
 				}
 				else
 				{
-					_putchar(' ');
+					if (m > q)
+					{
+						_putchar(' ');
+					}
 				}
 			}
 			_putchar('\n');
