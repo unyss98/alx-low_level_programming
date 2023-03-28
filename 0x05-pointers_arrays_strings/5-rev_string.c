@@ -16,9 +16,10 @@ void rev_string(char *s)
 	char t;
 
 	for (count = 0; count != '\0'; count++)
-		;
+	;
 	j = 0;
 	split = count / 2;
+
 	while (split--)
 	{
 		t = s[count - j - 1];
