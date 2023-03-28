@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -10,10 +9,7 @@
  */
 
 void reset_to_98(int *n)
-{
-	/* value of n */
+{	
 	_putchar('n');
-	/* address of n */
-	printf("%p", &n);
 	*n = 98;
 }
