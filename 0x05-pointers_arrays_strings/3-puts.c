@@ -10,7 +10,7 @@
 
 void _puts(char *str)
 {
-	int i;
+	char i;
 
 	for (i = 0; str[i] != '\0'; ++i)
 	{
