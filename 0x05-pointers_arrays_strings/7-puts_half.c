@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts_half - prints half of a string 
+ * puts_half - prints half of a string
  *
  * @str: a pointer to the string str
  *
@@ -20,7 +20,7 @@ void puts_half(char *str)
 	z = i / 2;
 	if (i % 2 == 1)
 		z++;
-	
+
 	while (z < i)
 	{
 		_putchar(str[z]);
