@@ -23,17 +23,12 @@ int main(void)
 		}
 		else
 		{
-			if (a > 9)
+			printf("%d", a);
+			if (a > 100)
 			{
-				putchar('0' + a / 10);
-				putchar('0' + a % 10);
-				putchar(' ');
+				printf(" ");
 			}
-			else
-			{
-				putchar('0' + a);
-				putchar(' ');
-			}
+
 		}
 		putchar('\n');
 	}
