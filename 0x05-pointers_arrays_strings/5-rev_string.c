@@ -15,7 +15,7 @@ void rev_string(char *s)
 	int split;
 	char t;
 
-	for (count = 0; count != '\0'; count++)
+	for (count = 0; s[count] != '\0'; count++)
 	;
 	j = 0;
 	split = count / 2;
@@ -28,5 +28,3 @@ void rev_string(char *s)
 		j++;
 	}
 }
-
-
