@@ -20,8 +20,8 @@ int main(void)
 		{
 			if ((seconddigit != firstdigit) && (seconddigit > firstdigit))
 			{
-				putchar('0' + firstdigit / 10);
-				putchar('0' + seconddigit % 10);
+				putchar('0' + firstdigit);
+				putchar('0' + seconddigit);
 				if ((firstdigit != 8) && (seconddigit != 9))
 				putchar(',');
 				putchar(' ');
