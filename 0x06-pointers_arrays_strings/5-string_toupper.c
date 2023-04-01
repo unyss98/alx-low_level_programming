@@ -11,7 +11,6 @@
 char *string_toupper(char *s)
 {
 	int i;
-	char s;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -22,4 +21,5 @@ char *string_toupper(char *s)
 		}
 		i++;
 	}
-	return (s)
+	return (s);
+}
