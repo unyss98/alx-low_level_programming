@@ -1,23 +1,19 @@
 #include "main.h"
 
 /**
- * _puts_recursion - print a string
+ * _puts_recursion - print string
  *
- * @s: a pointer to string s
+ * @s: a pointer to the string s
  *
  * Return: nothing
  */
 
 void _puts_recursion(char *s)
 {
-	int i;
-
-	for (i = 0; s[i]; i++)
-	{
-		_putchar(s[i]);
-	}
-	if (s[i] == '\0')
+	if (*s == '\0')
 	{
 		_putchar('\n');
 	}
+	_putchar(*s);
+	_puts_recursion(s + 1);
 }
