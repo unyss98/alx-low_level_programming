@@ -11,12 +11,24 @@
 
 int is_prime_number(int n)
 {
-	int i;
-
-	i = 2;
-	if ((n % i == 0) && (i != n || i != 1))
+	if (n < 2)
+	{
 		return (0);
+	}
+	if (n == 2 || n == 3 || n == 5)
+	{
+		return (1);
+	}
 
+	is_prime_number(n / 2);
+	if (n % 2 == 0)
+		return (0);
+	is_prime_number(n / 3);
+	if (n % 3 == 0)
+		return (0);
+	is_prime_number(n / 5);
+	if (n % 5 == 0)
+		return (0);
 	else
 		return (1);
 }
