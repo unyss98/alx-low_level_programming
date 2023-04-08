@@ -15,7 +15,7 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	if (n == 2 || n == 3 || n == 5)
+	if (n == 2 || n == 3 || n == 5 || n == 7)
 	{
 		return (1);
 	}
@@ -28,6 +28,9 @@ int is_prime_number(int n)
 		return (0);
 	is_prime_number(n / 5);
 	if (n % 5 == 0)
+		return (0);
+	is_prime_number(n / 7);
+	if (n % 7 == 0)
 		return (0);
 	else
 		return (1);
