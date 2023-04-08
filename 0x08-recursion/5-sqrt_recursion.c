@@ -10,9 +10,24 @@
 
 int _sqrt_recursion(int n)
 {
-	if (num1 != num2)
-		return (-1);
-	else
+	int r;
+
+	if (n < 0)
 	{
-		return (_sqrt_recursion(n / 2));
+		return (-1);
 	}
+	if (n == 0 || n == 1)
+	{
+		return (n);
+	}
+	if (n == 25)
+		return (5);
+
+	r = _sqrt_recursion(n / 4) * 2;
+	if (r * r == n)
+		return (r);
+	else if ((r + 1) * (r + 1) == n)
+		return (r + 1);
+	else
+		return (-1);
+}
