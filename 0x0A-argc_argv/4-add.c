@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
 		for (a = 1; a < argc; a++)
 		{
 			c = atoi(argv[a]);
-			if (c == 0)
+			if (c <= 0)
 			{
 				printf("Error\n");
 				return (1);
 			}
 			else
 			{
-				sum = sum + c;
+				sum += c;
 			}
 		}
 		printf("%d\n", sum);
