@@ -28,5 +28,8 @@ char *create_array(unsigned int size, char c)
 			p[i] = c;
 		}
 	}
-	return (p);
+	if (size != 0)
+		return (p);
+	else
+		return (NULL);
 }
