@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
  * str_concat - returns pointer to concatenated string
  *
@@ -9,7 +8,6 @@
  *
  * Return: pointer to concatenated string
  */
-
 char *str_concat(char *s1, char *s2)
 {
 	char *p;
@@ -26,7 +24,6 @@ char *str_concat(char *s1, char *s2)
 			s1len++;
 		}
 	}
-
 	if (s2 != NULL)
 	{
 		s2len = 0;
@@ -35,29 +32,19 @@ char *str_concat(char *s1, char *s2)
 			s2len++;
 		}
 	}
-
 	p = malloc((s1len + s2len) * sizeof(char) + 1);
 	if (p == NULL)
-	{
 		return (NULL);
-	}
-	else
+	if (s1 != NULL)
 	{
-		if (s1 != NULL)
-		{
-			for (i = 0; i < s1len; i++)
-			{
-				p[i] = s1[i];
-			}
-		}
-		if (s2!= NULL)
-		{
-			for (j = 0; j < s2len; j++)
-			{
-				p[i + j] = s2[j];
-			}
-			p[i + j] = '\0';
-		}
+		for (i = 0; i < s1len; i++)
+			p[i] = s1[i];
 	}
+	if (s2 != NULL)
+	{
+		for (j = 0; j < s2len; j++)
+			p[i + j] = s2[j];
+	}
+	p[i + j] = '\0';
 	return (p);
 }
