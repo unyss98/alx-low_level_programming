@@ -37,6 +37,10 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s1 == NULL && s2 == NULL)
 		p = NULL;
+	if (s1 == NULL)
+		p = s2;
+	if (s2 == NULL)
+		p = s1;
 	if (s1 != NULL)
 	{
 		for (i = 0; s1[i] != '\0'; i++)
