@@ -11,19 +11,25 @@ char *str_concat(char *s1, char *s2)
 	char *p;
 	int s1len, s2len, i, j;
 
-	s1len = 0;
-	while (s1len != '\0')
+	if (s1 != NULL)
 	{
-		s1len++;
+		s1len = 0;
+		while (s1len != '\0')
+		{
+			s1len++;
+		}
 	}
 	if (s1 == NULL)
 	{
 		s1len = 0;
 	}
-	s2len = 0;
-	while (s2len != '\0')
+	if (s2 != NULL)
 	{
-		s2len++;
+		s2len = 0;
+		while (s2len != '\0')
+		{
+			s2len++;
+		}
 	}
 	if (s2 == NULL)
 	{
