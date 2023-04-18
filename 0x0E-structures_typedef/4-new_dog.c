@@ -14,16 +14,30 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog_t;
-	struct dog_t *p;
+	dog_t *p;
 
-	p = &dog_t;
+	p = malloc(sizeof(dog_t));
+	if (p == NULL)
+		return (NULL);
 
-	memcpy(dog_t->name, *name, strlen(name) + 1);
+	p->name = malloc(strlen(name) + 1);
+	if (p->name == NULL)
+	{
+		free(p);
+		return (NULL);
+	}
 
-	dog_t->age = age;
+	p->owner = malloc(strlen(owner) + 1);
+	if (p->owner == NULL)
+	{
+		free(p->name);
+		free(p);
+		return (NULL);
+	}
 
-	memcpy(dog_t->owner, owner, strlen(owner) + 1);
+	strcpy(p->name, name);
+	p->age = age;
+	strcpy(p->owner, owner);
 
 	return (p);
 }
