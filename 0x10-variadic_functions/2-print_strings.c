@@ -17,17 +17,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list list;
 	unsigned int i;
 	char *str;
-	char **p = NULL;
 
 	va_start(list, n);
 
 	for (i = 0; i < n; i++)
 	{
 		str = va_arg(list, char*);
-		p = malloc(sizeof(char));
-		if (p == NULL)
-			return;
-		*p = str;
 		if (str == NULL)
 		{
 			printf("(nil)");
@@ -35,9 +30,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", str);
 		if (separator != NULL && i != n - 1)
-			printf("%s ", separator);
-		free(p);
-		p = NULL;
+			printf("%s", separator);
 	}
 	printf("\n");
 	va_end(list);
