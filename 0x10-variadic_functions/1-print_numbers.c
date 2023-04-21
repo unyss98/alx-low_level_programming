@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
 
 /**
  * print_numbers - prints numbers
@@ -19,15 +18,19 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int j;
 
-	if (separator == NULL)
-		exit(1);
-
 	va_start(list, n);
 
 	for (i = 0; i < n - 1; i++)
 	{
 		j = va_arg(list, int);
-		printf("%d%s ", j, separator);
+		if (separator != NULL)
+		{
+			printf("%d%s ", j, separator);
+		}
+		else
+		{
+			printf("%d ", j);
+		}
 	}
 	printf("%d", va_arg(list, int));
 	va_end(list);
