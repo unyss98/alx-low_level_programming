@@ -17,8 +17,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list list;
 	unsigned int i;
 	char *str;
-	char **p;
-
+	char **p = NULL;
 
 	va_start(list, n);
 
@@ -38,6 +37,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (separator != NULL && i != n - 1)
 			printf("%s ", separator);
 		free(p);
+		p = NULL;
 	}
 	printf("\n");
 	va_end(list);
