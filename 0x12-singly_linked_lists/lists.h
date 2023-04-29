@@ -1,5 +1,6 @@
 #ifndef LISTS_HEADER_FILE
 #define LISTS_HEADER_FILE
+
 #include <stddef.h>
 
 /**
@@ -10,6 +11,7 @@
  *
  * Description: singly linked list node structure
  */
+
 typedef struct list_s
 {
     char *str;
