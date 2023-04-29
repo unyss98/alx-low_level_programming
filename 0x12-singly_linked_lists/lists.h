@@ -1,5 +1,6 @@
 #ifndef LISTS_HEADER_FILE
 #define LISTS_HEADER_FILE
+#include <stddef.h>
 
 /**
  * struct list_s - singly linked list
