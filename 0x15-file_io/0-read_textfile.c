@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <unistd.h>
 
 /**
  * read_textfile - reads text file and prints to stdout
@@ -17,11 +18,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t r, c;
 	char *buffer;
 	FILE *fp;
+	int fd = fileno(stdout);
+
+	if (isatty(fileno(stdout)) == 0)
+		fd = fileno(stderr);
 
 	if (filename == NULL)
 		return (0);
 
-	fp = fopen(filename, "r");
+	fp = fdopen(fd, "r");
 	if (fp == NULL)
 		return (0);
 
