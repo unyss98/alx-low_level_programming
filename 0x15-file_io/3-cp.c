@@ -15,10 +15,9 @@
 
 int main(int argc, char *argv[])
 {
-	int fdfrom, fdto, cl, cs, stat_outcome;
+	int fdfrom, fdto, cl, cs;
 	char buffer[1024];
 	ssize_t bytesRead, bytesWritten;
-	struct stat stat_buffer;
 
 	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -41,11 +40,10 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fdfrom);
 		exit(100);
 	}
-	stat_outcome = stat(argv[2], &stat_buffer);
-	if (stat_outcome == 0)
-		fdto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, stat_buffer.st_mode & 0777);
+	if (argv[2] != NULL)
+		fdto = open(argv[2], O_WRONLY | O_TRUNC);
 	else
-		fdto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+		fdto = open(argv[2], O_WRONLY | O_CREAT, 0664);
 	if (fdto < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
