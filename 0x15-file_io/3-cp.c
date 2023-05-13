@@ -16,7 +16,8 @@
 int main(int argc, char *argv[])
 {
 	int fdfrom, fdto, cl, cs;
-	char buffer[1024];
+#define BUFFER_SIZE 1024
+	char buffer[BUFFER_SIZE];
 	ssize_t bytesRead, bytesWritten;
 
 	if (argc != 3)
