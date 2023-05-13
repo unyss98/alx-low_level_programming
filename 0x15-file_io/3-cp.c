@@ -40,14 +40,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fdfrom);
 		exit(100);
 	}
-	if (argv[2] != NULL)
-		fdto = open(argv[2], O_WRONLY | O_TRUNC);
-	else
-		fdto = open(argv[2], O_WRONLY | O_CREAT, 0664);
+	fdto = open(argv[2], O_WRONLY | O_CREAT, 0664 | O_EXCL);
 	if (fdto < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		fdto = open(argv[2], O_WRONLY | O_TRUNC);
+		if (fdto < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
 	bytesWritten = write(fdto, buffer, bytesRead);
 	if (bytesWritten < 0)
