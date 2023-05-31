@@ -1,1 +1,1 @@
-beginner lessons on C programming language
+beginner projects on C programming language
